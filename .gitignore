@@ -1,26 +1,12 @@
-<<<<<<< HEAD
 # Visual Studio
 .vs/
-*.user
 
-# Build outputs
-x64/
-Debug/
-Release/
-*.obj
-*.pdb
-*.ilk
-*.ipch
-*.tlog
-*.log
-=======
-# Visual Studio / build outputs
-.vs/
+# Build output
 x64/
 Debug/
 Release/
 
-# User-specific VS files
+# User-specific files
 *.user
 *.suo
 
@@ -29,7 +15,7 @@ Release/
 *.pdb
 *.idb
 *.ilk
+*.ipch
 *.tlog
 *.log
 *.exe
->>>>>>> origin/master
