@@ -26,7 +26,7 @@ populated other files with data that allows matrix output capability and prints 
 
 
 **week 6**
-Pushed nost recent progress to github that creates a 5x5 grid and prints it to the console
+Pushed most recent progress to github that creates a 5x5 grid and prints it to the console
 Grid.h: holds cells_ using a vector
 Point.h: Defines the point coordinate type for grid positions
 Heuristic.h: Uses the Manhattan distance formula for movement up, down, left, right
@@ -34,6 +34,11 @@ AStarSolver.h: declares find path function, but I am not using it yet
 Main.cpp: brings the program together and runs it as a smoke test and doesnt run any A* logic yet
 Grid.cpp: Implements grid methods from Grid.h
 AStar.cpp: will have the A* logic but hasnt been implemented but has not been implemented at this time
+
+Removed duplicate point reference in heuristic.h so theres only one point type in point.h and no more conflict with Point.h
+<img width="621" height="256" alt="image" src="https://github.com/user-attachments/assets/6616a868-d9d4-4565-9f19-cbdb612e0ca8" />
+
+
 
 
 **week 7**
