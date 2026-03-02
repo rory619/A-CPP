@@ -22,7 +22,7 @@ Researching the purpose for each file and ensuring I understand what data each f
 Cereated a smoke test that ensures my files are building correctly and the control flow works as intended and the core matrix lifecycle works
 
 **week 5**
-populated other files with data that allows matrix output capability and prints out a grid
+populated other files with data that allows matrix output capability and prints out a grid to work as a smoke test
 
 
 **week 6**
