@@ -42,3 +42,4 @@ Removed duplicate point reference in heuristic.h so theres only one point type i
 
 
 **week 7**
+added in A* logic from GeeksForGeeks and tweaked it to make it compatiple with my project: https://www.geeksforgeeks.org/dsa/a-search-algorithm/ also added a temporary test that tests the matrix for the location of number 1 in the matrix and if the number is out of bounds
