@@ -2,8 +2,28 @@
 layout: home 
 ---
 
-Welcome to my AStar Algorithm C++ blog!
+Welcome to my AStar Algorithm C++ blog
 
+This project implements C++ code to create a pathfinding algorithm using a 2d grid with obstacles with an aim to find the shortest path from the starting point to the end point using a heuristic assisted search, this was developed incrementally, building on the knowledge gained and progress made. 
+
+**Requirements**
+**Modern C++**:
+modern C++ coding techniques were used in the making of this project such as range bassed loops: auto, std::vector, std::priority_queue
+
+**Object oriented design**:
+Grid:Its responsibility
+Point:Its responsibility
+AStarSolver: Its responsibility
+Heuristic: Its responsibility
+
+**Use of STL**
+std::vector: for Grid storage
+std::priority_queue: for open set
+std::unordered_map:for g scores and path reconstruction
+std::unordered_set: for closed set
+
+**A* implementation**
+The map is grid based, and obstacles are suported, movement is 4 directional, the Manhattan formula is used to calculate 2 points on a grid. The shortest path is returned, if no path exists it returns empty
 
 
 
