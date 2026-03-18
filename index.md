@@ -37,7 +37,7 @@ modern C++ coding techniques were used in the making of this project such as
   header and used across multiple files without causing multiple definition errors.
 
 **Object oriented design**:
-Grid: Manages the map data. Keeps the internal cell storage private and exposes only 
+Grid: Manages the map data. It Keeps the internal cell storage private and exposes only 
 what other classes need: setCell(), isObstacle(), inBounds(), and print(). 
 Nothing outside Grid can corrupt the grid.
 
@@ -79,6 +79,7 @@ Researching the project, finding out the requirements and researching the A* alg
 YouTube videos of how A* works, I learned that it uses a heuristic to estimate the remaining distance to the 
 goal, which makes it faster because it does not travel in the wrong 
 direction.
+I prompted ChatGPT to explain to me what A* algorithm is and how it could be implemented in a C++ pathfindng project to get a better idea of how the framework operates and how the skeleton of the project would look.
 
 **week 2**
 Sorting out file structure and creating the files I think I will need to get the algorithm working:
@@ -108,6 +109,7 @@ AStarSolver.h: declares find path function, but I am not using it yet
 Main.cpp: brings the program together and runs it as a smoke test and doesnt run any A* logic yet
 Grid.cpp: Implements grid methods from Grid.h
 AStar.cpp: will have the A* logic but has not been implemented at this time
+I also had to put my work in a new project because the project files got corrupted after I tried to move the project to a different folder and push it to GitHub, and putting it in a fresh project fixed this problem.
 
 Removed duplicate point reference in heuristic.h so theres only one point type in point.h and no more conflict with Point.h
 <img width="621" height="256" alt="image" src="https://github.com/user-attachments/assets/6616a868-d9d4-4565-9f19-cbdb612e0ca8" />
@@ -116,11 +118,11 @@ Removed duplicate point reference in heuristic.h so theres only one point type i
 
 
 **week 7**
-added in A* logic from GeeksForGeeks and tweaked it to make it compatible with my project: https://www.geeksforgeeks.org/dsa/a-search-algorithm/ also added a temporary test that tests the matrix for the location of number 1 in the matrix and if the number is out of bounds
+added in A* logic from GeeksForGeeks and tweaked it to make it compatible with my project: https://www.geeksforgeeks.org/dsa/a-search-algorithm/ also added a temporary test that tests the matrix for the location of number 1 in the matrix and if the number is out of bounds. I used ChatGPT to help me understand how the initial code funcions and to gain an understanding of the changes that would have to be made to the template A* algorithm
 
 What I changed to fit my own design:
  The GeeksForGeeks version uses a flat array and integer cell IDs. I rewrote it to use a Point struct and Grid class instead.
- I replaced their open list with std::priority_queue using a LowestF 
+ I replaced the open list with std::priority_queue using a LowestF 
   comparator so the node with the lowest f-score is always used first.
  I added early exit guards at the top of findPath() for out-of-bounds start/goal, I also put
   obstacles on start/goal, and start == goal.
@@ -149,6 +151,7 @@ Point: defines a coordinate
 The solver only needs to call grid.inBounds(), grid.isObstacle() so grid hides its structure and gives a clean interface
 To ensure correct pathfinding each move on the grid costs 1 and movement is up/down/left/right and the manhattan distance formula never over estimates the the remaining cost resulting in A* returning the shortest path
 This project represents a grid with obstacles and uses A* pathfinding algorithm with Manhattan distance heuristic to get and display the shortest path from a start point to a goal point
+I prompted ChatGPT to explain to me how my project works so I can compare my knowledge and view on the project as a whole to ChatGPT's take on the project, so I can possibly gain a better understanding of it and for the possibility for the AI agent to spot something in the project that might need to be addressed that I cant see. This process would give me a better understanding of the project
 
 **week 9**
 I added a dedicated Tests.cpp file with six test cases testing both normal operation 
@@ -186,5 +189,25 @@ Checks that the solver does not begin from an obstacle cell.
 These tests show that the algorithm can handle failure cleanly and 
 does not crash or return incorrect results when the input is incorrect. Writing them also portrayed that my inBounds() check needed to handle negative row/col values, 
 which I fixed in Grid.cpp.
+
+**references**
+[1] GeeksforGeeks, “A* Search Algorithm,” GeeksforGeeks. [Online]. Available: https://www.geeksforgeeks.org/dsa/a-search-algorithm/
+. [Accessed: Mar. 18, 2026].
+
+[2] F. Dalwigk, “A* algorithm EASY explained (example),” YouTube, video, [Online]. Available: https://www.youtube.com/watch?v=kEY1OxOj_CY
+. [Accessed: Mar. 18, 2026].
+
+[3] P. E. Hart, N. J. Nilsson, and B. Raphael, "A Formal Basis for the Heuristic 
+Determination of Minimum Cost Paths," IEEE Transactions on Systems Science and 
+Cybernetics, vol. 4, no. 2, pp. 100–107, 1968.
+
+**AI tools**
+The use of AI tools have been mentoned in the blog 
+Any AI suggested code was understood and adapted to fit my own ideas and structure before being used.
+
+
+
+
+
 
 
